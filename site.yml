@@ -1,0 +1,14 @@
+# master playbook
+
+# Apply common configuration to all hosts
+- hosts: all
+  roles:
+  - common
+
+- hosts: webservers
+  roles: 
+  - web
+
+- hosts: dbservers
+  roles: 
+  - db
