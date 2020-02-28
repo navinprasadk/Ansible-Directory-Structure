@@ -5,10 +5,16 @@
   roles:
   - common
 
+# Configure and deploy the web servers. Note that we include two roles
+# here, the 'software' role which simply installs the software required 
+# to run the web application, and 'webapp' which includes our example web
+# application.
 - hosts: webservers
   roles: 
-  - web
+  - software
+  - webapp
 
+# Configure and deploy database servers.
 - hosts: dbservers
   roles: 
   - db
